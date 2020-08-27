@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Sanctorus.unity
+    path: Assets/Scenes/sanctorus.unity
     guid: 23834f3f414952044a2b640a7493741e
-  - enabled: 1
-    path: Assets/Scenes/arcterra.unity
-    guid: d9f8c70f64b4d3e4d946a57bc1d4d9ec
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/alinos_perch.unity
-    guid: 88d3e60ad44fc034a9e6d07b3282cf8c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
