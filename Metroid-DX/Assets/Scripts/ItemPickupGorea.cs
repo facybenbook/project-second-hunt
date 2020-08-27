@@ -3,7 +3,7 @@
  
 
   
-public class ItemPickupBattlehammer: MonoBehaviour {
+public class ItemPickupGorea: MonoBehaviour {
 
 	
 
@@ -12,7 +12,7 @@ public class ItemPickupBattlehammer: MonoBehaviour {
 		 
 		GameObject go2 = GameObject.Find("polySurface11");
 		GunGlow gunglow = go2.GetComponent<GunGlow>(); 
-		gunglow.baseColor = Color.green;
+		gunglow.baseColor = Color.grey;
 		//gunglow.mat.SetColor = ("_EmissionColor", Color.red);
 		
 		

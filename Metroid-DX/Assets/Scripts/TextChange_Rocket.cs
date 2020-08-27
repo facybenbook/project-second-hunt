@@ -4,7 +4,7 @@
  
  
 
- public class TextChange : MonoBehaviour {
+ public class TextChange_Rocket : MonoBehaviour {
  
     Text txt;
     public int health;
@@ -15,7 +15,7 @@
 
 
          txt = gameObject.GetComponent<Text>(); 
-		 health = 42;
+		 health = 1;
          txt.text=health.ToString();
 		 
      }

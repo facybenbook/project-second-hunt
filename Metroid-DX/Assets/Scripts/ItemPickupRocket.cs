@@ -8,7 +8,7 @@ public class ItemPickupRocket: MonoBehaviour {
 	
      void OnTriggerEnter(Collider other) {
 		GameObject go = GameObject.Find("rockettext");
-		TextChange txtchange = go.GetComponent<TextChange>();
+		TextChange_Rocket txtchange = go.GetComponent<TextChange_Rocket>();
         txtchange.health++;
 		
 		
