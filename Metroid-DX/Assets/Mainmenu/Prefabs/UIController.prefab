@@ -699,7 +699,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e0f37c9f5fbc56e40b5d5725a4b720c5, type: 3}
+    m_Font: {fileID: 12800000, guid: 52b216556f48ffd48b44d3abb398390a, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -711,7 +711,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: v1.1.3 - Created with Unity 2017.4.3
+  m_Text: xxxx
 --- !u!1 &1080387057204796
 GameObject:
   m_ObjectHideFlags: 0
@@ -9464,7 +9464,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d386d0f1f3e9e6e449fcc7643b0098a4, type: 3}
+    m_Font: {fileID: 12800000, guid: 52b216556f48ffd48b44d3abb398390a, type: 3}
     m_FontSize: 62
     m_FontStyle: 0
     m_BestFit: 0
@@ -9473,7 +9473,7 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Multiplayer

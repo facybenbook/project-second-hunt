@@ -9,23 +9,42 @@ public class ItemPickupImperialist: MonoBehaviour {
 
 	
      void OnTriggerEnter(Collider other) {
-		
-		GameObject go = GameObject.Find("ammo");
-		ItemPickupAmmo active = go.GetComponent<ItemPickupAmmo>();
-		active.activeweapon = 4;
 		 
 		GameObject go2 = GameObject.Find("polySurface11");
 		GunGlow gunglow = go2.GetComponent<GunGlow>(); 
-		
-		gunglow.baseColor = Color.red;
-		gunglow.intensity = 3.0f;
+		Color orange = new Color(1.0f, 0.64f, 0.0f);
+		gunglow.baseColor = orange;
 		//gunglow.mat.SetColor = ("_EmissionColor", Color.red);
 		
 		
 
 		
 		
-        Destroy(gameObject);
+		
+		
+                IEnumerator Respawn()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Ammo picked up at: " + Time.time);
+		
+		Vector3 oldPosition = transform.position;
+		
+		transform.position = new Vector3(100, 100, 100);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(9);
+
+		
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Ammo respawned at" + Time.time + " position: " + oldPosition);
+		
+		transform.position = oldPosition;
+
+    }
+		
+		
+		StartCoroutine(Respawn());
+     }
 
      }
- }
+ 

@@ -251,7 +251,7 @@ namespace SpeedTutorMainMenuSystem
         {	Cursor.visible = true;
             if (ButtonType == "Yes")
             {
-                SceneManager.LoadScene("sanctorus");
+                SceneManager.LoadScene("alinos-perch");
             }
 
             if (ButtonType == "No")

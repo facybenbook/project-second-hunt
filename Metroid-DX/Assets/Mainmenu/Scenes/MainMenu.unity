@@ -2034,7 +2034,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: d386d0f1f3e9e6e449fcc7643b0098a4,
+      objectReference: {fileID: 12800000, guid: 52b216556f48ffd48b44d3abb398390a,
         type: 3}
     - target: {fileID: 114263711298867918, guid: ed022c6eaaa372f498c83d69665e2adc,
         type: 3}
@@ -2110,8 +2110,23 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: d386d0f1f3e9e6e449fcc7643b0098a4,
+      objectReference: {fileID: 12800000, guid: 52b216556f48ffd48b44d3abb398390a,
         type: 3}
+    - target: {fileID: 114708566844137424, guid: ed022c6eaaa372f498c83d69665e2adc,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 114708566844137424, guid: ed022c6eaaa372f498c83d69665e2adc,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114708566844137424, guid: ed022c6eaaa372f498c83d69665e2adc,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114718852103185918, guid: ed022c6eaaa372f498c83d69665e2adc,
         type: 3}
       propertyPath: m_Enabled
@@ -2136,7 +2151,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: d386d0f1f3e9e6e449fcc7643b0098a4,
+      objectReference: {fileID: 12800000, guid: 52b216556f48ffd48b44d3abb398390a,
         type: 3}
     - target: {fileID: 114803030738577818, guid: ed022c6eaaa372f498c83d69665e2adc,
         type: 3}
@@ -2147,7 +2162,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: d386d0f1f3e9e6e449fcc7643b0098a4,
+      objectReference: {fileID: 12800000, guid: 52b216556f48ffd48b44d3abb398390a,
         type: 3}
     - target: {fileID: 114835905219775522, guid: ed022c6eaaa372f498c83d69665e2adc,
         type: 3}
@@ -5073,6 +5088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758435123}
   - component: {fileID: 758435124}
+  - component: {fileID: 758435125}
   m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: Untagged
@@ -5092,7 +5108,7 @@ Transform:
   m_LocalScale: {x: 56.2907, y: 56.290703, z: 56.290703}
   m_Children: []
   m_Father: {fileID: 1867788289144623845}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -69.15, y: 125.78, z: 170.304}
 --- !u!108 &758435124
 Light:
@@ -5155,6 +5171,21 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!111 &758435125
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758435122}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &771134768
 GameObject:
   m_ObjectHideFlags: 0
@@ -5451,6 +5482,8 @@ GameObject:
   m_Component:
   - component: {fileID: 774138957}
   - component: {fileID: 774138958}
+  - component: {fileID: 774138959}
+  - component: {fileID: 774138960}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -5533,6 +5566,41 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!95 &774138959
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774138956}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 851a560c1bfa57a4f94e02a893c3fc3c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &774138960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774138956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2a10dc0abb35e4f9b999fadc13af15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 0}
+  minIntensity: 0
+  maxIntensity: 1
+  smoothing: 10
 --- !u!1 &791924028
 GameObject:
   m_ObjectHideFlags: 0
@@ -7237,7 +7305,7 @@ VideoPlayer:
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 0.092
+  - 0.097
   m_Url: file://C:/Users/Manu/Videos/Captures/Metroid DX 2020-08-24 18-46-43.mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
@@ -12004,6 +12072,7 @@ GameObject:
   - component: {fileID: 1792111390}
   - component: {fileID: 1792111392}
   - component: {fileID: 1792111391}
+  - component: {fileID: 1792111393}
   m_Layer: 0
   m_Name: orb
   m_TagString: Untagged
@@ -12137,6 +12206,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1792111393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792111389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2a10dc0abb35e4f9b999fadc13af15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 0}
+  minIntensity: 0
+  maxIntensity: 20
+  smoothing: 32
 --- !u!1 &1804518977
 GameObject:
   m_ObjectHideFlags: 0
@@ -14333,7 +14418,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1867788289144623845}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -1.976, z: -16.381}
 --- !u!1 &1342186080533334111
 GameObject:
@@ -14363,8 +14448,8 @@ Transform:
   m_LocalScale: {x: 0.017764924, y: 0.017764924, z: 0.017764924}
   m_Children:
   - {fileID: 774138957}
-  - {fileID: 1268752577010639805}
   - {fileID: 758435123}
+  - {fileID: 1268752577010639805}
   - {fileID: 1763309888}
   m_Father: {fileID: 0}
   m_RootOrder: 5
