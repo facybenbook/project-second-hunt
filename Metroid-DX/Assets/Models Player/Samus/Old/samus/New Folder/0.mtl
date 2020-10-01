@@ -1,0 +1,108 @@
+# Blender MTL File: 'ModelRenderLighting.blend'
+# Material Count: 8
+
+newmtl 10_neon
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.506825 0.514750 0.778848
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd neon.png
+map_d neon.png
+
+newmtl 10_neon2
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.537610 0.576025 0.461427
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd gun.png
+map_d gun.png
+
+newmtl 10_neon3
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.515107 0.613845 0.553815
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd ashimawari.png
+map_d ashimawari.png
+
+newmtl 26_ashimawari_0.3
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.432367 0.673566 0.546608
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ashimawari.png
+map_Bump ashimawari_n.png
+map_Ke environment_eye.png
+map_d ashimawari.png
+refl environment_eye.png
+
+newmtl 26_gun_0.3
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.655618 0.775638 0.590944
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd gun.png
+map_Bump gun_n.png
+map_Ke environment_eye.png
+map_d gun.png
+refl environment_eye.png
+
+newmtl 26_samusarm_0.3
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.607042 0.413666 0.419924
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd samus_arm.png
+map_Bump samus_arm_n.png
+map_Ke environment_eye.png
+map_d samus_arm.png
+refl environment_eye.png
+
+newmtl 26_samuships_0.3
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.437977 0.497894 0.516158
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd samus_hips.png
+map_Bump samus_hips_n.png
+map_Ke environment_eye.png
+map_d samus_hips.png
+refl environment_eye.png
+
+newmtl Material.002
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2

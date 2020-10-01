@@ -13,10 +13,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
+		
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
         [SerializeField] private float m_JumpSpeed;
-        [SerializeField] private float m_StickToGroundForce;
-        [SerializeField] private float m_GravityMultiplier;
+        [SerializeField] public float m_StickToGroundForce;
+        [SerializeField] public float m_GravityMultiplier;
         [SerializeField] private MouseLook m_MouseLook;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
@@ -30,9 +31,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private Camera m_Camera;
         private bool m_Jump;
+        public bool m_Jump_Pad;
+        public bool m_Jump_Pad_over;
+        public float Padforce;
         private float m_YRotation;
         private Vector2 m_Input;
-        private Vector3 m_MoveDir = Vector3.zero;
+        private Vector3 m_MoveDir = new Vector3(0,0,0);
+		
+		public GameObject PlayerModelSamus;
+		Animator anim;
+		
+		
+		
         private CharacterController m_CharacterController;
         private CollisionFlags m_CollisionFlags;
         private bool m_PreviouslyGrounded;
@@ -41,14 +51,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-
+		public Rigidbody rb;
         [Header("Custom Settings")]
         public Transform cannonPivot;
         public Transform helmetPivot;
-
+		public float thrust = 20.0f;
+		public float radius = 5.0F;
+		public float power = 10.0F;
+		private bool movebug = true;
         // Use this for initialization
         private void Start()
-        {
+        {			
+			anim = PlayerModelSamus.GetComponent<Animator> ();
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
@@ -64,7 +78,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         // Update is called once per frame
         private void Update()
-        {
+			
+        {	
+			Physics.gravity = new Vector3(0, -10.0F, 0);		
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -83,8 +99,27 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_MoveDir.y = 0f;
             }
+            if (m_CharacterController.isGrounded && !m_Jumping)
+            {
+                if (Input.GetKey("w"))
+                {	anim.SetInteger("condition", 1);
+				}	
+                if (Input.GetKey("a"))
+                {	anim.SetInteger("condition", 3);
+				}	
+                if (Input.GetKey("d"))
+                {	anim.SetInteger("condition", 4);
+				}	
+                if (Input.GetKey("s"))
+                {	anim.SetInteger("condition", 5);
+				}	                
+
+														
+            }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+			
+
         }
 
 
@@ -97,7 +132,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
         private void FixedUpdate()
-        {
+        {	
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -111,19 +146,42 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_MoveDir.x = desiredMove.x*speed;
             m_MoveDir.z = desiredMove.z*speed;
+				
 
 
             if (m_CharacterController.isGrounded)
-            {
+            {	
                 m_MoveDir.y = -m_StickToGroundForce;
 
+               
+				
+
+			
+				
                 if (m_Jump)
-                {
+                {	anim.SetInteger("condition", 2);
                     m_MoveDir.y = m_JumpSpeed;
                     PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;
+                } 
+				
+				
+				else  {anim.SetInteger("condition", 0);}
+			
+                
+				if (m_Jump_Pad)
+                {
+					m_MoveDir.y = Padforce;
+					//m_MoveDir.y = Padforce;
+					//rb = GetComponent<Rigidbody>();
+					//rb.AddForce(0, 20, 0, ForceMode.Impulse);
+                    PlayJumpSound();
+                    m_Jump = false;
+                    m_Jumping = true;
+					
                 }
+				
             }
             else
             {
@@ -161,6 +219,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_NextStep = m_StepCycle + m_StepInterval;
 
             PlayFootStepAudio();
+			
         }
 
 
@@ -182,7 +241,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
         private void UpdateCameraPosition(float speed)
-        {
+        {	
             Vector3 newCameraPosition;
             if (!m_UseHeadBob)
             {
@@ -218,6 +277,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
             m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+			
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
