@@ -10,7 +10,7 @@ public class GunGlow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    baseColor = Color.yellow;
+    baseColor = Color.white;
     }
 
     // Update is called once per frame

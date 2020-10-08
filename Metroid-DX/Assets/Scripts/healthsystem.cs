@@ -27,10 +27,22 @@ public class healthsystem : MonoBehaviour {
 	Image hpbar;
 	Image ammobar;
 	//public GameObject healthtext;
+	//// SYLUX ////
 	public GameObject health_l;
 	public GameObject ammo_r;
 	public Sprite hpgreen;
 	public Sprite hpred;
+	//////
+	
+	
+		//// SAMUS ////
+	//public GameObject Bar;
+	//public GameObject ammo_r;
+	//public Sprite hpgreen;
+	//public Sprite hpred;
+	//////
+	
+	
  // Use this for initialization
      void Start () {
 		

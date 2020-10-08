@@ -10,10 +10,7 @@ public class ItemPickupNeutral: MonoBehaviour {
 	
      void OnTriggerEnter(Collider other) {
 		 
-		GameObject go2 = GameObject.Find("polySurface11");
-		GunGlow gunglow = go2.GetComponent<GunGlow>(); 
-		
-		gunglow.baseColor = Color.white;
+
 		//gunglow.intensity = 3.0f;
 		//gunglow.mat.SetColor = ("_EmissionColor", Color.red);
 		
@@ -44,6 +41,10 @@ public class ItemPickupNeutral: MonoBehaviour {
 		
 		
 		StartCoroutine(Respawn());
+		GameObject go2 = GameObject.Find("polySurface11");
+		GunGlow gunglow = go2.GetComponent<GunGlow>(); 
+		
+		gunglow.baseColor = Color.white;
      }
 
      }
