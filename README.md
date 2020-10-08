@@ -1,4 +1,4 @@
-# Metroid DX (Hunters Remake)
+# Project Second Hunt
 A remake of the multiplayer from the NDS game "Metroid Prime Hunters" in Unity.
  
  ![alt text](https://cdn.discordapp.com/attachments/737380819273908387/748580642828189697/unknown.png?width=1194&height=671)
