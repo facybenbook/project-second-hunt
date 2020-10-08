@@ -5,6 +5,8 @@ using UnityEngine;
 public class ToggleAlt : MonoBehaviour
 {
 	private bool altstatus;
+	AudioSource audioSource;
+	
 	
 	public GameObject alt_form;
 	public GameObject player;
@@ -18,6 +20,9 @@ public class ToggleAlt : MonoBehaviour
 	public GameObject cam_alt;
 	
 	private CharacterController cc_ego;
+	
+	public AudioClip MorphIn;
+	public AudioClip MorphOut;
 	Animator anim;
 	Camera ballcam;
 	Camera egocam;
@@ -26,7 +31,7 @@ public class ToggleAlt : MonoBehaviour
     void Start()
     {	ballcam = cam_alt.GetComponent<Camera> ();
 		egocam = cam_ego.GetComponent<Camera> ();
-	
+		audioSource = GetComponent<AudioSource>();
 	
 	
 	
@@ -63,6 +68,7 @@ public class ToggleAlt : MonoBehaviour
 
 			player.SetActive(true);
 			alt_form.SetActive(false);
+			audioSource.PlayOneShot(MorphOut, 0.7F);
 			
 	
         }
@@ -76,6 +82,8 @@ public class ToggleAlt : MonoBehaviour
 			ball.transform.position = cc_ego.transform.position - offset2;
 			alt_form.SetActive(true);
 			player.SetActive(false);
+			audioSource.PlayOneShot(MorphIn, 0.7F);
+						
 			
         }
 		/////

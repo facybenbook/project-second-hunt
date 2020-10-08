@@ -15,7 +15,7 @@
 
 
          txt = gameObject.GetComponent<Text>(); 
-		 health = 1;
+		 health = 40;
          txt.text=health.ToString();
 		 
      }

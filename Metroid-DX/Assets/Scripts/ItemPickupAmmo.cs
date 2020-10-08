@@ -43,10 +43,10 @@ public int activeweapon;
 		}
 		
 		if (activeweapon == 4) {
-		if(txtchange.health < 24){
-        txtchange.health = txtchange.health+5;
+		if(txtchange.health < 49){
+        txtchange.health = txtchange.health+10;
 		}
-		else {txtchange.health = txtchange.health + (29-txtchange.health);
+		else {txtchange.health = txtchange.health + (59-txtchange.health);
 		}	
 		}
         

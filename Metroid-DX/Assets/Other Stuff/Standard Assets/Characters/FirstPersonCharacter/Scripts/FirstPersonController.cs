@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -29,6 +30,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+	
+		
         private Camera m_Camera;
         private bool m_Jump;
         public bool m_Jump_Pad;
@@ -59,7 +62,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		public float radius = 5.0F;
 		public float power = 10.0F;
 		private bool movebug = true;
+		
+		
+
         // Use this for initialization
+		
+		
+		
         private void Start()
         {			
 			anim = PlayerModelSamus.GetComponent<Animator> ();
@@ -73,6 +82,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+			
+			
         }
 
 
@@ -80,6 +91,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
 			
         {	
+		
+		
+			//healthbar.fillAmount = health;
+			
+			
+			
+			
 			Physics.gravity = new Vector3(0, -10.0F, 0);		
             RotateView();
             // the jump state needs to read here to make sure it is not missed

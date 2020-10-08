@@ -15,7 +15,7 @@
 
 
          txt = gameObject.GetComponent<Text>(); 
-		 health = 42;
+		 health = 10;
          txt.text=health.ToString();
 		 
      }
@@ -23,6 +23,14 @@
      // Update is called once per frame
      void Update () {
         
+	//healt to bar
+	
+	
+
+
+		
+		
+		
        txt.text=health.ToString();
 	   Debug.Log(health);
 		 

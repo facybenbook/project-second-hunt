@@ -1,26 +1,35 @@
 ﻿ using UnityEngine;
  using System.Collections;
- 
+ using UnityEngine.UI; // Required when Using UI elements.
+
 
   
 public class ItemPickupHealth: MonoBehaviour {
 
 	
 
+	AudioSource audioSource;
 	
+	public AudioClip impact;
      void OnTriggerEnter(Collider other) {
 		 
 
 
-		
+		audioSource = GetComponent<AudioSource>();
 		GameObject go = GameObject.Find("healthtext");
 		TextChange txtchange = go.GetComponent<TextChange>();
+		audioSource.PlayOneShot(impact, 0.7F);
 		if(txtchange.health < 140){
         txtchange.health = txtchange.health+60;
+		
 		}
+		
+		
 		else {txtchange.health = txtchange.health + (199-txtchange.health);
 		}
 		
+		
+
 		
 		
 		
