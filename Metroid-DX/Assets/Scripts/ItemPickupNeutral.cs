@@ -1,15 +1,43 @@
 ﻿ using UnityEngine;
  using System.Collections;
- 
+ using UnityEngine.UI; // Required when Using UI elements.
+ using System;
 
   
 public class ItemPickupNeutral: MonoBehaviour {
-
 	
+	AudioSource audioSource;
+	public AudioClip impact;
+	
+	public Sprite battle;
+	public Sprite imp;
+	public Sprite jud;
+	public Sprite mag;
+	public Sprite neutral;
+	public Sprite omega;
+	public Sprite shock;
+	public Sprite volt;
+    public Sprite rocket;
+
+
+private Sprite hunterweapon;
+
+// if (hunter == samus) {hunterweapon = rocket;}
+// if (hunter == sylux) {hunterweapon = shock;}
+// if (hunter == kanden) {hunterweapon = volt;}
+// if (hunter == noxus) {hunterweapon = jud;}
+// if (hunter == trace) {hunterweapon = imp;}
+// if (hunter == weavel) {hunterweapon = battle;}
+// if (hunter == spire) {hunterweapon = mag;}
+
+
+Image weaponsactive;	
 
 	
      void OnTriggerEnter(Collider other) {
-		 
+		 audioSource = GetComponent<AudioSource>();
+		 audioSource.PlayOneShot(impact, 0.7F);
+		 hunterweapon = shock;
 
 		//gunglow.intensity = 3.0f;
 		//gunglow.mat.SetColor = ("_EmissionColor", Color.red);
@@ -39,12 +67,24 @@ public class ItemPickupNeutral: MonoBehaviour {
 
     }
 		
-		
+	//respawn item after pickup
 		StartCoroutine(Respawn());
+		///
+		
+		
+		//gunglow//
 		GameObject go2 = GameObject.Find("polySurface11");
 		GunGlow gunglow = go2.GetComponent<GunGlow>(); 
-		
 		gunglow.baseColor = Color.white;
+		//////
+		
+		
+		
+		///icon change on weapon pickup////
+		GameObject go3 = GameObject.Find("weapon_active");
+		weaponsactive = go3.GetComponent<Image>(); 
+		weaponsactive.sprite = hunterweapon;
+		/////
      }
 
      }

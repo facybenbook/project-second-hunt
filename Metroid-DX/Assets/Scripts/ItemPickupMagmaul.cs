@@ -1,19 +1,26 @@
 ﻿ using UnityEngine;
  using System.Collections;
- 
+ using UnityEngine.UI; // Required when Using UI elements.
+ using System;
 
   
 public class ItemPickupMagmaul: MonoBehaviour {
 
-	
+//	public Sprite battle;
+//	public Sprite imp;
+//	public Sprite jud;
+ 	public Sprite mag;
+//	public Sprite neutral;
+//	public Sprite omega;
+//	public Sprite shock;
+//	public Sprite volt;
+
+Image weaponsactive;		
 
 	
      void OnTriggerEnter(Collider other) {
 		 
-		GameObject go2 = GameObject.Find("polySurface11");
-		GunGlow gunglow = go2.GetComponent<GunGlow>(); 
-		Color orange = new Color(1.0f, 0.64f, 0.0f);
-		gunglow.baseColor = orange;
+
 		//gunglow.mat.SetColor = ("_EmissionColor", Color.red);
 		
 		
@@ -42,8 +49,27 @@ public class ItemPickupMagmaul: MonoBehaviour {
 
     }
 		
-		
+	//respawn item after pickup
 		StartCoroutine(Respawn());
+		///
+		
+		
+		//gunglow//
+		GameObject go2 = GameObject.Find("polySurface11");
+		GunGlow gunglow = go2.GetComponent<GunGlow>(); 
+		Color orange = new Color(1.0f, 0.64f, 0.0f);
+		gunglow.baseColor = orange;
+		//////
+		
+		
+		
+		///icon change on weapon pickup////
+		GameObject go3 = GameObject.Find("weapon_active");
+		weaponsactive = go3.GetComponent<Image>(); 
+		weaponsactive.sprite = mag;
+		/////
+		
+		
      }
 
      }

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Mainmenu/Scenes/MainMenu.unity
     guid: e84c9862265a1104a9d724503d4111aa
   - enabled: 0
-    path: Assets/Scenes/sanctorus/sanctorus.unity
+    path: Assets/Scenes/WIP/sanctorus/sanctorus.unity
     guid: 23834f3f414952044a2b640a7493741e
   - enabled: 0
     path: 
@@ -21,9 +21,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/alinos-perch/alinos-perch.unity
+    path: Assets/Scenes/WIP/alinos-perch/alinos-perch.unity
     guid: 7283bccb33037f54f8e35cba4830523b
   - enabled: 1
-    path: Assets/Scenes/alinos/Alinos.unity
+    path: Assets/Scenes/Working/alinos/Alinos.unity
     guid: 4a07a2d2673d1d74bb254060d660774f
   m_configObjects: {}

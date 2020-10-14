@@ -189,14 +189,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			
                 
 				if (m_Jump_Pad)
-                {
-					m_MoveDir.y = Padforce;
+                {	//m_CharacterController.enabled = false;
+					
+					
+					
 					//m_MoveDir.y = Padforce;
 					//rb = GetComponent<Rigidbody>();
 					//rb.AddForce(0, 20, 0, ForceMode.Impulse);
                     PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;
+					m_MoveDir.y = Padforce;
+					//m_CharacterController.enabled = true;
 					
                 }
 				

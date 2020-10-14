@@ -28,7 +28,7 @@ public class Jump_Pad: MonoBehaviour {
 		
 		
 		FirstPersonController.m_Jump_Pad = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
 		FirstPersonController.m_Jump_Pad = false;
 
 
