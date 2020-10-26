@@ -22,9 +22,9 @@ public class followcam : MonoBehaviour
  
     public float rotationDampening = 3.0f;
     public float zoomDampening = 5.0f;
- 
-    private float x = 0.0f;
-    private float y = 0.0f;
+	public Quaternion rotation;
+    public float x;
+    public float y;
     private float currentDistance;
     private float desiredDistance;
     private float correctedDistance;
@@ -52,12 +52,13 @@ public class followcam : MonoBehaviour
     void LateUpdate ()
     { 	
         // Don't do anything if target is not defined
-     
+
         // If either mouse buttons are down, let the mouse govern camera position
         if (true)
         {	
             x += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
             y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+	//now controlled in toggle alt // if (Input.GetKeyDown("u")){x = 0; y = 0;};
         }
         // otherwise, ease behind the target if any of the directional keys are pressed
         else if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
@@ -70,8 +71,8 @@ public class followcam : MonoBehaviour
         y = ClampAngle(y, yMinLimit, yMaxLimit);
  
         // set camera rotation
-        Quaternion rotation = Quaternion.Euler(y, x, 0);
- 
+        rotation = Quaternion.Euler(y, x, 0);
+
         // calculate the desired distance
         desiredDistance -= Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * zoomRate * Mathf.Abs(desiredDistance);
         desiredDistance = Mathf.Clamp(desiredDistance, minDistance, maxDistance);

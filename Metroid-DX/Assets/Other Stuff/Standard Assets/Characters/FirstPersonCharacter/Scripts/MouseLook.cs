@@ -17,23 +17,32 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool lockCursor = true;
 
 
-        private Quaternion m_CharacterTargetRot;
-        private Quaternion m_CameraTargetRot;
+        public Quaternion m_CharacterTargetRot;
+        public Quaternion m_CameraTargetRot;
         private bool m_cursorIsLocked = true;
 
         public void Init(Transform character, Transform camera)
-        {
-            m_CharacterTargetRot = character.localRotation;
-            m_CameraTargetRot = camera.localRotation;
+        {	
+           m_CharacterTargetRot = character.localRotation;
+           m_CameraTargetRot = camera.localRotation;
         }
 
 
         public void LookRotation(Transform character, Transform camera)
         {
+			
+			//MORPH CAM COPY
+						//if (Input.GetKeyDown("q")){
+						//m_CharacterTargetRot = Quaternion.Euler (0f, 0f, 0f);
+						//m_CameraTargetRot = Quaternion.Euler (0f, 0f, 0f);
+						//};
+			////////
+
             float yRot = CrossPlatformInputManager.GetAxis("Mouse X") * XSensitivity;
             float xRot = CrossPlatformInputManager.GetAxis("Mouse Y") * YSensitivity;
 
-            m_CharacterTargetRot *= Quaternion.Euler (0f, yRot, 0f);
+            m_CharacterTargetRot *= Quaternion.Euler (0f, yRot, 0f); 
+			
             m_CameraTargetRot *= Quaternion.Euler (-xRot, 0f, 0f);
 
             if(clampVerticalRotation)

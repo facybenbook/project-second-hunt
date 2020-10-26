@@ -11,11 +11,11 @@ private bool applyForce_s = false;
 private bool applyForce_d = false;
 private bool applyForce_a = false;
 
-
+public int morphFORCE;
 
 
 void FixedUpdate() {
-	Physics.gravity = new Vector3(0, -35.0F, 0);
+	Physics.gravity = new Vector3(0, -100.0F, 0);
 	   Cursor.visible = false;
    Cursor.lockState = CursorLockMode.Locked;
 	 //GetComponent<Rigidbody>().centerOfMass =  com;
@@ -30,12 +30,16 @@ void FixedUpdate() {
     } else {
         applyForce_s = false;
     }	
+	if (Input.GetKeyDown("q")) {
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+		GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
+    } 	
 
     if (applyForce_w) {
-        GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * 8,ForceMode.Impulse);
+        GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * morphFORCE,ForceMode.Impulse);
     }
     if (applyForce_s) {
-        GetComponent<Rigidbody>().AddForce(-Camera.main.transform.forward * 8,ForceMode.Impulse);
+        GetComponent<Rigidbody>().AddForce(-Camera.main.transform.forward * morphFORCE,ForceMode.Impulse);
     }
     }	
 

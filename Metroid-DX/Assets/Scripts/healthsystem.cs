@@ -28,12 +28,18 @@ public class healthsystem : MonoBehaviour {
 	Image ammobar;
 	//public GameObject healthtext;
 	//// SYLUX ////
-	public GameObject health_l;
-	public GameObject ammo_r;
-	public Sprite hpgreen;
-	public Sprite hpred;
+	//public GameObject health_l_syl;
+	//public GameObject ammo_r_syl;
+	//public Sprite hpgreen_syl;
+	//public Sprite hpred_syl;
 	//////
-	
+
+	//// TRACE ////
+	//public GameObject health_l_tra;
+	//public GameObject ammo_r_tra;
+	//public Sprite hpgreen_tra;
+	//public Sprite hpred_tra;
+	//////	
 	
 		//// SAMUS ////
 	//public GameObject Bar;
@@ -61,21 +67,23 @@ public class healthsystem : MonoBehaviour {
 		ammo = GameObject.Find("ammotext").GetComponent<Text>();
 		////
 		
-		hpbar = health_l.GetComponent<Image> ();
-		ammobar = ammo_r.GetComponent<Image> ();
+		hpbar = GameObject.Find("health_l").GetComponent<Image> ();
+		ammobar = GameObject.Find("ammo_r").GetComponent<Image> ();
+		//ammobar = ammo_r.GetComponent<Image> ();
 		float.TryParse(health.text,out health_float);
 		float.TryParse(ammo.text,out ammo_float);
 
 		
 		if(health_float > 25) {
 		
-			hpbar.sprite = hpgreen;
-			health.color = Color.green;}
+			//hpbar.sprite = hpgreen;
+			//health.color = Color.green;
+			}
 		
 		else {
 			// Color32(byte r, byte g, byte b, byte a);
-			hpbar.sprite = hpred;
-			health.color = new Color32( 209,70,97,255 );
+			//hpbar.sprite = hpred;
+			//health.color = new Color32( 209,70,97,255 );
 		}
 		 
 		hpbar.fillAmount = (health_float/200);

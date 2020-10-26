@@ -71,20 +71,26 @@ Image weaponsactive;
 		StartCoroutine(Respawn());
 		///
 		
-		
-		//gunglow//
+		if (GameObject.Find("polySurface11") != null)
+{
+    	//gunglow//
 		GameObject go2 = GameObject.Find("polySurface11");
 		GunGlow gunglow = go2.GetComponent<GunGlow>(); 
 		gunglow.baseColor = Color.white;
 		//////
+}
 		
-		
-		
+
+				if (GameObject.Find("polySurface11") != null)
+{
 		///icon change on weapon pickup////
 		GameObject go3 = GameObject.Find("weapon_active");
 		weaponsactive = go3.GetComponent<Image>(); 
 		weaponsactive.sprite = hunterweapon;
 		/////
+}
+		
+
      }
 
      }

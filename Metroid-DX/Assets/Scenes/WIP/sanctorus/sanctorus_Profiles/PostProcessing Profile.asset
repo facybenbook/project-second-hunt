@@ -46,12 +46,12 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 17
+    value: 100
   intensityX:
     overrideState: 1
-    value: 0
+    value: 0.76
   intensityY:
-    overrideState: 0
+    overrideState: 1
     value: 1
   centerX:
     overrideState: 0
@@ -60,8 +60,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   scale:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 0.75
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
     overrideState: 1
     value: 32
   sampleCount:
-    overrideState: 0
+    overrideState: 1
     value: 10
 --- !u!114 &3778251906277498635
 MonoBehaviour:
@@ -125,7 +125,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.1
+    value: 0.2
   fastMode:
     overrideState: 0
     value: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 2
+    value: 4
   threshold:
     overrideState: 0
     value: 1
@@ -193,14 +193,14 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   focusDistance:
-    overrideState: 0
-    value: 10
+    overrideState: 1
+    value: 1
   aperture:
     overrideState: 1
-    value: 17.2
+    value: 32
   focalLength:
     overrideState: 1
-    value: 133
+    value: 1
   kernelSize:
     overrideState: 1
     value: 1
