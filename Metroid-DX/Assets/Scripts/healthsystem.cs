@@ -91,7 +91,7 @@ public class healthsystem : MonoBehaviour {
 		
 		
 		//ammo ist 29 fill = 0.5
-		Debug.Log(health);
+		//Debug.Log(health);
         //hpbar.fillAmount += 1.0f / 10f * Time.deltaTime;
 	
 	

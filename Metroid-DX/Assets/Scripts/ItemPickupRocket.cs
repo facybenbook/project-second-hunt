@@ -50,11 +50,14 @@ Image weaponsactive;
 
     }
 		
+				if (GameObject.Find("polySurface11") != null)
+{
 		///icon change on weapon pickup////
 		GameObject go3 = GameObject.Find("weapon_active");
 		weaponsactive = go3.GetComponent<Image>(); 
 		weaponsactive.sprite = rocket;
 		/////
+}
 		StartCoroutine(Respawn());
      }
  }

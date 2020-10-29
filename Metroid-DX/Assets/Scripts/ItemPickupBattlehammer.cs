@@ -6,7 +6,11 @@
 
   
 public class ItemPickupBattlehammer: MonoBehaviour {
+	AudioSource audioSource;
+	
+	public AudioClip impact;
 
+	
  	public Sprite battle;
 //	public Sprite imp;
 //	public Sprite jud;
@@ -21,7 +25,9 @@ Image weaponsactive;
 	
      void OnTriggerEnter(Collider other) {
 		 
-
+		audioSource = GetComponent<AudioSource>();
+		audioSource.PlayOneShot(impact, 0.7F);
+		
 		//gunglow.mat.SetColor = ("_EmissionColor", Color.red);
 		
 		
@@ -53,23 +59,25 @@ Image weaponsactive;
 		
 		StartCoroutine(Respawn());
 				//respawn item after pickup
-		StartCoroutine(Respawn());
-		///
 		
-		
-		//gunglow//
+				if (GameObject.Find("polySurface11") != null)
+{
+    	//gunglow//
 		GameObject go2 = GameObject.Find("polySurface11");
 		GunGlow gunglow = go2.GetComponent<GunGlow>(); 
 		gunglow.baseColor = Color.green;
 		//////
+}
 		
-		
-		
+
+				if (GameObject.Find("polySurface11") != null)
+{
 		///icon change on weapon pickup////
 		GameObject go3 = GameObject.Find("weapon_active");
 		weaponsactive = go3.GetComponent<Image>(); 
 		weaponsactive.sprite = battle;
 		/////
+}
 		
      }
 

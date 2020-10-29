@@ -41,7 +41,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private Vector2 m_Input;
         private Vector3 m_MoveDir = new Vector3(0,0,0);
 		
-		public GameObject PlayerModelSamus;
+		//public GameObject PlayerModelSamus;
 		Animator anim;
 		
 		
@@ -71,7 +71,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		
         private void Start()
         {			
-			anim = PlayerModelSamus.GetComponent<Animator> ();
+			//anim = PlayerModelSamus.GetComponent<Animator> ();
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
@@ -120,16 +120,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (m_CharacterController.isGrounded && !m_Jumping)
             {
                 if (Input.GetKey("w"))
-                {	anim.SetInteger("condition", 1);
+                {	//anim.SetInteger("condition", 1);
 				}	
                 if (Input.GetKey("a"))
-                {	anim.SetInteger("condition", 3);
+                {	//anim.SetInteger("condition", 3);
 				}	
                 if (Input.GetKey("d"))
-                {	anim.SetInteger("condition", 4);
+                {	//anim.SetInteger("condition", 4);
 				}	
                 if (Input.GetKey("s"))
-                {	anim.SetInteger("condition", 5);
+                {	//anim.SetInteger("condition", 5);
 				}	                
 
 														
@@ -177,7 +177,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			
 				
                 if (m_Jump)
-                {	anim.SetInteger("condition", 2);
+                {	//anim.SetInteger("condition", 2);
                     m_MoveDir.y = m_JumpSpeed;
                     PlayJumpSound();
                     m_Jump = false;
@@ -185,7 +185,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 } 
 				
 				
-				else  {anim.SetInteger("condition", 0);}
+				//else  {anim.SetInteger("condition", 0);}
 			
                 
 				if (m_Jump_Pad)

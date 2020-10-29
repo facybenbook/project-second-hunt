@@ -57,12 +57,12 @@ public float scale(float OldMin, float OldMax, float NewMin, float NewMax, float
 
 
 	
-        anim = PlayerModelSamus.GetComponent<Animator> ();
-		anim.SetInteger("condition", 0);
+       // anim = PlayerModelSamus.GetComponent<Animator> ();
+		//anim.SetInteger("condition", 0);
 		
 
 		cc_ego = ControllerEgo.GetComponent<CharacterController>();
-		
+		FPCM.GetComponent<followcam>().y = 0;
 	
     }
 
@@ -82,7 +82,7 @@ public float scale(float OldMin, float OldMax, float NewMin, float NewMax, float
 		else if (Input.GetKeyDown("q") && altstatus == true){altstatus = false;}
 			
 		if (altstatus == true){	
-		FPCM.GetComponent<followcam>().y = 0;
+		
 		///samus to morph orientation
 		}
 
@@ -136,7 +136,7 @@ public float scale(float OldMin, float OldMax, float NewMin, float NewMax, float
 		
 float scaleMe = fpc.m_MouseLook.m_CameraTargetRot.eulerAngles.x;
 float scaled = scale(90f, 280f, 80, -80, scaleMe);	
-Debug.Log(fpc.m_MouseLook.m_CharacterTargetRot.eulerAngles);	//left and right
+//Debug.Log(fpc.m_MouseLook.m_CharacterTargetRot.eulerAngles);	//left and right
 
 
 //Debug.Log(FPCM.GetComponent<followcam>().x);	//left and right
@@ -144,7 +144,7 @@ Debug.Log(fpc.m_MouseLook.m_CharacterTargetRot.eulerAngles);	//left and right
 //Debug.Log(fpc.m_MouseLook.m_CameraTargetRot.eulerAngles.x);
 //Debug.Log(FPCM.GetComponent<followcam>().y);
 //Debug.Log(scaled);
-Debug.Log(FPCM.transform.rotation.eulerAngles);
+//Debug.Log(FPCM.transform.rotation.eulerAngles);
  
 
 

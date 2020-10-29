@@ -32,7 +32,7 @@
 		
 		
        txt.text=health.ToString();
-	   Debug.Log(health);
+	  // Debug.Log(health);
 		 
      }
 

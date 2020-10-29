@@ -37,7 +37,7 @@ Image weaponsactive;
      void OnTriggerEnter(Collider other) {
 		 audioSource = GetComponent<AudioSource>();
 		 audioSource.PlayOneShot(impact, 0.7F);
-		 hunterweapon = shock;
+		 hunterweapon = imp;
 
 		//gunglow.intensity = 3.0f;
 		//gunglow.mat.SetColor = ("_EmissionColor", Color.red);
@@ -76,7 +76,7 @@ Image weaponsactive;
     	//gunglow//
 		GameObject go2 = GameObject.Find("polySurface11");
 		GunGlow gunglow = go2.GetComponent<GunGlow>(); 
-		gunglow.baseColor = Color.white;
+		gunglow.baseColor = Color.red;
 		//////
 }
 		

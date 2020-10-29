@@ -5,13 +5,17 @@
   
 public class ItemPickupHealth_big: MonoBehaviour {
 
+	AudioSource audioSource;
 	
+	public AudioClip impact;
 
 	
      void OnTriggerEnter(Collider other) {
 		 
 
-
+		audioSource = GetComponent<AudioSource>();
+		audioSource.PlayOneShot(impact, 0.7F);
+		
 		
 		GameObject go = GameObject.Find("healthtext");
 		TextChange txtchange = go.GetComponent<TextChange>();

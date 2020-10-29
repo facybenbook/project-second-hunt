@@ -10,8 +10,7 @@ public class GunGlow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    baseColor = Color.white;
-    }
+  }
 
     // Update is called once per frame
  void Update () {
@@ -21,7 +20,7 @@ public class GunGlow : MonoBehaviour
 		 float floor = 0.2f;
 		 float ceiling = 3f;
 		 float emission = floor + Mathf.PingPong (Time.time, ceiling - floor);
-		 float intensity = 2.0f;
+		 float intensity = 0.7f;
 
 //mat.SetColor("_EmissionColor", new Color(0.0f,0.7f,1.0f,1.0f) * intensity);
 

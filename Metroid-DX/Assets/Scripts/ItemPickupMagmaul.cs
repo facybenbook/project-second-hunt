@@ -54,21 +54,34 @@ Image weaponsactive;
 		///
 		
 		
-		//gunglow//
+
+		
+		
+
+		
+		
+		
+		
+		
+				if (GameObject.Find("polySurface11") != null)
+{
+    	//gunglow//
 		GameObject go2 = GameObject.Find("polySurface11");
 		GunGlow gunglow = go2.GetComponent<GunGlow>(); 
 		Color orange = new Color(1.0f, 0.64f, 0.0f);
 		gunglow.baseColor = orange;
 		//////
+}
 		
-		
-		
+
+				if (GameObject.Find("polySurface11") != null)
+{
 		///icon change on weapon pickup////
 		GameObject go3 = GameObject.Find("weapon_active");
 		weaponsactive = go3.GetComponent<Image>(); 
 		weaponsactive.sprite = mag;
 		/////
-		
+}
 		
      }
 

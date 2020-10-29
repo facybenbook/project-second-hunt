@@ -5,6 +5,9 @@
 
   
 public class ItemPickupImperialist: MonoBehaviour {
+	AudioSource audioSource;
+	
+	public AudioClip impact;
 
 //	public Sprite battle;
 	public Sprite imp;
@@ -18,7 +21,9 @@ public class ItemPickupImperialist: MonoBehaviour {
 Image weaponsactive;
      void OnTriggerEnter(Collider other) {
 		 
-
+		audioSource = GetComponent<AudioSource>();
+		audioSource.PlayOneShot(impact, 0.7F);
+	
 		//gunglow.mat.SetColor = ("_EmissionColor", Color.red);
 		
 		

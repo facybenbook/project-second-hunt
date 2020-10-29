@@ -16,9 +16,11 @@ public class ItemPickupHealth: MonoBehaviour {
 
 
 		audioSource = GetComponent<AudioSource>();
+		audioSource.PlayOneShot(impact, 0.7F);
+				
 		GameObject go = GameObject.Find("healthtext");
 		TextChange txtchange = go.GetComponent<TextChange>();
-		audioSource.PlayOneShot(impact, 0.7F);
+
 		if(txtchange.health < 140){
         txtchange.health = txtchange.health+60;
 		
