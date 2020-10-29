@@ -2,7 +2,7 @@
 A remake of the multiplayer from the NDS game "Metroid Prime Hunters" in Unity.
  
  ![alt text](https://cdn.discordapp.com/attachments/737380819273908387/748580642828189697/unknown.png?width=1194&height=671)
- ![alt text](https://i.redd.it/u8emb1nfhps51.png?width=1194&height=671)
+ ![alt text](https://media.discordapp.net/attachments/763075549219389460/771132880154918922/6.PNG?width=1188&height=671)
  
  
 
